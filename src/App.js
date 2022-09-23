@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          im pushing
+          im pulling
         </a>
       </header>
     </div>
