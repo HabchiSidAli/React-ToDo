@@ -1,13 +1,18 @@
+import { useState } from "react";
+import ToDoList from "./ToDoList";
+
+
 const Home = () => {
 
-    const handleClick = () => {
-        console.log ('hello, ninjas');
-    }
+    const [toDos, setToDo] = useState([
+        {title: 'Study React' , body: 'Lorem Ipsum...' , description: 'Lorem Ipsum...' , id: 1},
+        {title: 'Test React' , body: 'Lorem Ipsum...' , description: 'Lorem Ipsum...' , id: 2},
+        {title: 'Play Games' , body: 'Lorem Ipsum...' , description: 'Lorem Ipsum...' , id: 3}
+    ])
 
     return ( 
         <div className="home">
-            <h2>Home</h2>
-            <button onClick={handleClick}>Click A me!</button>
+            <ToDoList toDos={toDos}/>
         </div>
      );
 }
