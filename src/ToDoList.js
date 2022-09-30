@@ -1,4 +1,4 @@
-const ToDoList = ({toDos}) => {
+const ToDoList = ({toDos, handleDelete}) => {
 
     return ( 
         <div className="todo-list">
@@ -6,6 +6,7 @@ const ToDoList = ({toDos}) => {
                 <div className="toDoPreview" key={toDo.id}>
                     <h2>{ toDo.title}</h2>
                     <p>{ toDo.body}</p>
+                    <button onClick={() => handleDelete(toDo.id)}>Delete</button>
                 </div>
             ))}
         </div>

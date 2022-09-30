@@ -10,9 +10,14 @@ const Home = () => {
         {title: 'Play Games' , body: 'Lorem Ipsum...' , description: 'Lorem Ipsum...' , id: 3}
     ])
 
+    const handleDelete = (id) => {
+        const newToDos = toDos.filter(toDo => toDo.id !== id);
+        setToDo(newToDos);
+    }
+
     return ( 
         <div className="home">
-            <ToDoList toDos={toDos}/>
+            <ToDoList toDos={toDos} handleDelete={handleDelete}/>
         </div>
      );
 }
