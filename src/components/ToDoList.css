@@ -1,13 +1,33 @@
-.toDoPreview {
-  padding: 10px 16px;
-  margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
+.add-task-button {
+  color: #f1356d;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: none;
+
+  border-radius: 3px;
 }
-.toDoPreview:hover {
+
+.add-task-button-display-none {
+  display: none;
+}
+
+.add-task-button:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
-.toDoPreview h2 {
-  font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 8px;
+
+.form-add-todo {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-add-todo-display-none {
+  display: none;
+}
+
+.form-add-todo div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }

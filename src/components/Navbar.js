@@ -5,8 +5,7 @@ const Navbar = () => {
     <nav className="navbar">
       <h1>Name</h1>
       <div className="links">
-        <a href="/">Home</a>
-        <a href="/create">New task</a>
+        <button onClick={() => {}}>Home</button>
       </div>
     </nav>
   );

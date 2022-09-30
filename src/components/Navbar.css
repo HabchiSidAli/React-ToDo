@@ -14,11 +14,13 @@
 .navbar .links {
   margin-left: auto;
 }
-.navbar a {
+.navbar button {
   margin-left: 16px;
+  background: none;
+  border: none;
   text-decoration: none;
   padding: 6px;
 }
-.navbar a:hover {
+.navbar button:hover {
   color: #f1356d;
 }
