@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import TodoItem from "./TodoItem";
 //css
 import "./ToDoList.css";
@@ -36,10 +36,13 @@ const ToDoList = () => {
   const body = useRef();
   const description = useRef();
 
-  const handleDelete = (id) => {
-    const newToDos = toDos.filter((toDo) => toDo.id !== id);
-    setToDo(newToDos);
-  };
+  const handleDelete = useCallback(
+    (id) => {
+      const newToDos = toDos.filter((toDo) => toDo.id !== id);
+      setToDo(newToDos);
+    },
+    [toDos]
+  );
 
   const handleStatus = (id) => {
     const newToDos = toDos.map((toDo) => {
@@ -120,7 +123,8 @@ const ToDoList = () => {
         </div>
         <button onClick={handleOnConfirmClick}>confirm</button>
       </div>
-      <div className="test">
+
+      <div>
         <div>
           <h1>TO Do</h1>
           {toDos.map((toDo) => {
